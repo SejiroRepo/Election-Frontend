@@ -1,0 +1,91 @@
+:root {
+  --bg: #f4f8f5;
+  --surface: #ffffff;
+  --surface-muted: #f8fbf8;
+  --border: #d8e3db;
+  --text: #365148;
+  --text-soft: #5d7369;
+  --text-h: #15251d;
+  --brand: #006633;
+  --gold-deep: #8a6a11;
+  --shadow:
+    0 18px 40px rgba(17, 41, 29, 0.08),
+    0 6px 12px rgba(17, 41, 29, 0.04);
+  --sans: Inter, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'Cascadia Code', Consolas, monospace;
+  font: 16px/1.6 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(0, 102, 51, 0.08), transparent 32%),
+    linear-gradient(180deg, #f7fbf8 0%, #eef5f0 100%);
+}
+
+#root {
+  width: min(1240px, calc(100% - 2rem));
+  margin: 1rem auto;
+  min-height: calc(100vh - 2rem);
+}
+
+@media (max-width: 768px) {
+  #root {
+    width: calc(100% - 1rem);
+    margin: 0.5rem auto;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1.05;
+  color: var(--text-h);
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  line-height: 1.15;
+  color: var(--text-h);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--text-h);
+}
+
+h4 {
+  font-size: 1rem;
+  color: var(--text-h);
+}
+
+strong {
+  color: var(--text-h);
+}
